@@ -7,6 +7,6 @@
     assert.isTrue(note_view.displayHTML() === '<ul><li><div>Favourite food: pesto</div></li><li><div>Favourite drink: seltzer</div></li></ul>')
     console.log("noteListView passed.")
   }
-  exports.noteListView = noteListView
+  exports.testListView = testListView
   testListView();
 })(this);

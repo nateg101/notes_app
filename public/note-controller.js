@@ -1,8 +1,19 @@
 (function(exports){
-  function getAppDiv() {
-    document.getElementById('app').innerHTML = 'Jess made me type toilet :(';
+  class NoteController {
+    constructor (noteList = new noteListModel()){
+      this.noteList = noteList
+      this.noteList.addNote('Coding can be fun')
+      this.noteList.addNote('It can also be hard too')
+      this.noteListView = new noteListView(noteList)
+      this.html = this.noteListView.displayHTML();
+    }
+
+    renderHTML(doc = document) {
+      doc.getElementById("app").innerHTML = this.html;
+    }
   }
-  exports.getAppDiv = getAppDiv
+  exports.NoteController = NoteController
 })(this);
 
-getAppDiv();
+controller = new NoteController()
+controller.renderHTML()
