@@ -1,10 +1,10 @@
 (function(exports) {
   function testNote() {
-    var note = new Note('Javascript is fun.')
-    assert.isTrue(note.text === 'Javascript is fun.')
+    let note = new Note('Javascript is fun.')
+    assert.isTrue(note.getText() === 'Javascript is fun.')
+    console.log("testNote passed.")
   }
 
   exports.testNote = testNote
-})(this)
-
-testNote();
+  testNote();
+})(this);
