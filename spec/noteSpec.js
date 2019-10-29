@@ -1,6 +1,10 @@
-function itCanShowText() {
-  var note = new Note("Javascript testing is fun.");
-  assertion.isTrue(note.showText() === "Javascript testing is fun.");
-};
+(function(exports) {
+  function testNote() {
+    var note = new Note('Javascript is fun.')
+    assert.isTrue(note.text === 'Javascript is fun.')
+  }
 
-itCanShowText();
+  exports.testNote = testNote
+})(this)
+
+testNote();
