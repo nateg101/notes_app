@@ -10,12 +10,12 @@
         return elementDouble
       }
     }
-    note_list = new noteListModel()
+
+    note_list = new noteListModel
     note_list.addNote('double')
     controller = new NoteController(note_list)
-    console.log(documentDouble.getElementById)
-    console.log(note_list)
     assert.isTrue(controller.renderHTML(documentDouble)==='<ul><li><div>double</div></li></ul>')
+    console.log('innerHTMLtest passed.')
   }
   exports.innerHTMLtest = innerHTMLtest
   innerHTMLtest();
