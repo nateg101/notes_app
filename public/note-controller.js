@@ -1,19 +1,13 @@
 (function(exports){
   class NoteController {
-    constructor (noteList = new noteListModel()){
+    constructor (noteList = new NoteListModel()){
       this.noteList = noteList
-      // noteList.addNote('Coding can be fun')
-      // noteList.addNote('It can also be hard too')
-      this.noteListView = new noteListView(noteList)
-      this.html = this.noteListView.displayHTML();
+      this.noteListView = new NoteListView(noteList)
     };
 
     renderHTML(doc = document) {
-      return doc.getElementById("app").innerHTML = this.html;
+      return doc.getElementById("app").innerHTML = this.noteListView.displayHTML();
     };
   }
   exports.NoteController = NoteController
 })(this);
-
-// controller = new NoteController  // cannot set property 'innerHTML' of null
-// controller.renderHTML(document)

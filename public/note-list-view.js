@@ -1,16 +1,16 @@
-(function(exports){
-  class noteListView {
-    constructor(noteList) {
-      this.noteList = noteList
+(function(exports) {
+  class NoteListView {
+    constructor(NoteListModel) {
+      this.NoteListModel = NoteListModel;
     }
-    displayHTML() {
-      var output = "<ul>";
-      this.noteList.allNotes().forEach( function(note){
 
-        output += "<li><div>" + note.getText() + "</div></li>"
-      })
-      return output + "</ul>"
+    displayHTML() {
+      let noteListArray = this.NoteListModel.allNotes().map(
+        note => `<li><div>${note.getText()}</div></li>`
+      );
+      let html = noteListArray.join("");
+      return "<ul>" + html + "</ul>";
     }
   }
-  exports.noteListView = noteListView
+  exports.NoteListView = NoteListView;
 })(this);

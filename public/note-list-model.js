@@ -1,5 +1,5 @@
 (function(exports){
-  class noteListModel {
+  class NoteListModel {
     constructor() {
       this.notes = [];
     }
@@ -13,5 +13,5 @@
       return this.notes;
     }
   }
-  exports.noteListModel = noteListModel
+  exports.NoteListModel = NoteListModel
 })(this);

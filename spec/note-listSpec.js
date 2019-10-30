@@ -1,6 +1,6 @@
 (function(exports) {
   function testNoteList() {
-    let list = new noteListModel();
+    let list = new NoteListModel();
     list.addNote("A new note.");
     assert.isTrue(list.allNotes().length === 1);
     assert.isTrue(list.allNotes()[0].getText() === "A new note.")

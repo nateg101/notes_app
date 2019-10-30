@@ -11,7 +11,7 @@
       }
     }
 
-    note_list = new noteListModel
+    note_list = new NoteListModel
     note_list.addNote('double')
     controller = new NoteController(note_list)
     assert.isTrue(controller.renderHTML(documentDouble)==='<ul><li><div>double</div></li></ul>')

@@ -1,4 +1,3 @@
-
   class SingleNoteView {
     constructor(note = Note) {
       this.note = note
